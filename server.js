@@ -17,7 +17,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-app.post('/lista',async (req, res) => {
+app.post('https://api.render.com/deploy/srv-csqia23tq21c73dl09f0?key=lOhFcn1_FAw/lista',async (req, res) => {
    await prisma.tarefa.create({
         data:{
             nome: req.body.nome,
@@ -29,12 +29,12 @@ app.post('/lista',async (req, res) => {
     res.status(201)
 })
 
-app.get('/lista',async (req, res) => {
+app.get('https://api.render.com/deploy/srv-csqia23tq21c73dl09f0?key=lOhFcn1_FAw/lista',async (req, res) => {
     const lista = await prisma.tarefa.findMany()
     res.status(200).json(lista)
 });
 
-app.put('/lista/:id',async (req, res) => {
+app.put('https://api.render.com/deploy/srv-csqia23tq21c73dl09f0?key=lOhFcn1_FAw/lista/:id',async (req, res) => {
     await prisma.tarefa.update({
         where: {
             id:req.params.id
@@ -49,7 +49,7 @@ app.put('/lista/:id',async (req, res) => {
      res.status(201)
  })
 
- app.delete('/lista/:id',async (req, res) =>{
+ app.delete('https://api.render.com/deploy/srv-csqia23tq21c73dl09f0?key=lOhFcn1_FAw/lista/:id',async (req, res) =>{
     await prisma.tarefa.delete({
         where: {
             id:req.params.id,
