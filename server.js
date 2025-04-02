@@ -1,12 +1,4 @@
-/*
--Para crir o meu sistema de tarefas eu presciso de :
-- criar tarefas;
--editar tarefas;
--deletar tarefas;
--mostrar a listasdas tarefas;
-Guilherme
-FATTO.gui
-*/
+
 import express from 'express'
 import { PrismaClient } from '@prisma/client'
 import cors from'cors'
